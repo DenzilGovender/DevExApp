@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevExMobileApp.UI.BlogDetail">
+  <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+    <Label Text="{Binding title}" FontSize="24" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0" LineBreakMode="WordWrap"/>
+    <WebView Source="{Binding description}" Grid.Row="1" Grid.Column="0"></WebView>
+  </Grid>
+  
+  
+</ContentPage>

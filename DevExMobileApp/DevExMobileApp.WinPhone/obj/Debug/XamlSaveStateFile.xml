@@ -1,0 +1,17 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\denzil.govender\documents\visual studio 2015\projects\devexmobileapp\devexmobileapp\devexmobileapp.winphone\obj\debug\intermediatexaml\devexmobileapp.winphone.exe" HashGuid="3e1281c8-b807-b0b7-1463-699e145e7db0" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\devexmobileapp\devexmobileapp\bin\debug\devexmobileapp.dll" HashGuid="769413f8-6c8e-0e4b-323c-0c8951f3ab81" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xam.plugin.deviceinfo.2.1.2\lib\wpa81\plugin.deviceinfo.abstractions.dll" HashGuid="70ebd9ea-8e74-de22-c8fc-a9cc2152adb3" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xam.plugin.deviceinfo.2.1.2\lib\wpa81\plugin.deviceinfo.dll" HashGuid="bb2afdda-235c-ea66-ffca-54cdee6e3f36" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.core.dll" HashGuid="2a418b72-55c1-19a8-a363-4b8c348fbee0" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.dll" HashGuid="bb4040f4-26bb-5883-795e-627e39855666" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.winrt.dll" HashGuid="068a3578-03d9-2580-f12e-c531e1d2d71c" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.winrt.phone.dll" HashGuid="52b59dd3-49ca-beb7-ea1e-5100cbca4812" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.xaml.dll" HashGuid="39a2c026-b4e0-6e41-04bc-58950ef1ecfd" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\zxing.net.mobile.2.1.47\lib\portable-net45+netcore45+wpa81+wp8\zxing.net.mobile.core.dll" HashGuid="38134cec-c0fe-d6eb-8165-8800b21be862" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\zxing.net.mobile.forms.2.1.47\lib\portable-net45+netcore45+wpa81+wp8\zxing.net.mobile.forms.dll" HashGuid="3386278c-05cc-25f4-d642-cba6289af91b" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\zxing.net.mobile.2.1.47\lib\portable-net45+netcore45+wpa81+wp8\zxing.portable.dll" HashGuid="b32fdbab-943c-8e7e-9166-8c1c1fde910f" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\zxing.net.mobile.2.1.47\lib\portable-net45+netcore45+wpa81+wp8\zxingnetmobile.dll" HashGuid="403fe390-b491-4e51-9a7d-0f329a385624" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

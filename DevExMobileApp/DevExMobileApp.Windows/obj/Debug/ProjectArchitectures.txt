@@ -1,0 +1,2 @@
+C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp.Windows\DevExMobileApp.Windows.csproj;neutral
+C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp\DevExMobileApp.csproj;neutral

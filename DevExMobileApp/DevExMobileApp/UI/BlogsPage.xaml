@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevExMobileApp.UI.BlogsPage">
+
+  <ListView  x:Name="blogsView" RowHeight="300">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout  BackgroundColor="#000000" Orientation="Vertical">
+            
+              <Label x:Name="BlogTitle" TextColor="#ffffff" Font = "28" Text="{Binding Title}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" LineBreakMode="WordWrap"></Label>
+              <Label x:Name="BlogDate" Font = "15" TextColor="#ffffff" Text="{Binding DateCreated}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" ></Label>
+              <Label x:Name="BlogAuthor" Font = "15" TextColor="#ffffff" Text="{Binding Path=AuthorDetails[name]}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" ></Label>
+           
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

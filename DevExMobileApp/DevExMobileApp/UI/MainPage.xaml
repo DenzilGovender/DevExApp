@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevExMobileApp.UI.MainPage" Title="DevEx" BackgroundImage="night1.jpg">
+  <StackLayout >
+
+    <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" x:Name="loader"
+                          WidthRequest='50'
+                          HeightRequest='50' IsRunning="true">
+    </ActivityIndicator>
+    <WebView x:Name="Browser" WidthRequest="1000" HeightRequest="1000" Navigating="webOnNavigating"
+      Navigated="webOnEndNavigating">
+      
+    </WebView>
+  </StackLayout>
+
+  <Grid  x:Name="gridDashboard">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Label x:Name="DevexHeading" Font = "28" Text="A PLACE WHERE WE XCHANGE IDEAS, EXPERIENCES, PRACTICES AND SOLUTIONS" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Grid.ColumnSpan="2" Grid.RowSpan="2"></Label>
+    
+    <Button x:Name="Agenda" Text="Agenda" ContentLayout="Top,0" BackgroundColor="Transparent" Image="button.png"  HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0" Clicked="AgendaClicked"/>
+    <Button x:Name="Register" BackgroundColor="Transparent" Image="button.png" VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1" Clicked="AttendanceClicked" />
+    <Button x:Name="Blogs" BackgroundColor="Transparent" Image="button.png" VerticalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0" Clicked="BlogsClicked"/>
+    <Button x:Name="Topic" BackgroundColor="Transparent" Image="button.png" VerticalOptions="FillAndExpand" Grid.Row="3" Grid.Column="1" Clicked="SubmitClicked" />
+   
+    
+  </Grid>
+  
+  
+</ContentPage>
