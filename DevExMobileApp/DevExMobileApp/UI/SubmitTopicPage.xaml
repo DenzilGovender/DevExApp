@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevExMobileApp.UI.SubmitTopicPage" BackgroundImage="night1.jpg" Title="Submit a Topic">
+             x:Class="DevExMobileApp.UI.SubmitTopicPage" BackgroundImage="appback.jpg" Title="Submit a Topic">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="*"/>
@@ -18,16 +18,14 @@
       <ColumnDefinition Width="*" />
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
-    <Entry Placeholder="Name" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
-    <Entry Placeholder="Surname" Grid.Column="0" Grid.Row="3"  Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
-    <Entry Placeholder="Email" Grid.Column="0" Grid.Row="4"  Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
-    <Picker x:Name="presenterPicker" Title="Do you wish to present this topic?" Grid.Row="5" Grid.Column="0"  Grid.ColumnSpan="3">
+    <Entry x:Name="Topic_Field" Placeholder="Topic" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
+    <Picker x:Name="presenterPicker" Title="Do you wish to present this topic?" Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="3">
       <Picker.Items>
         <x:String>Yes</x:String>
         <x:String>No</x:String>
       </Picker.Items>
     </Picker>
-    <Button x:Name="Register" Text="Submit" BackgroundColor="#ffffff" Grid.Row="7" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="SubmitClicked" />
+    <Button x:Name="Register" Text="Submit" BackgroundColor="#ffffff" Grid.Row="4" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="SubmitClicked" />
   </Grid>
   
   

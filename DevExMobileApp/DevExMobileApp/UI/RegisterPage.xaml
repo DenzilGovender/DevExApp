@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevExMobileApp.UI.RegisterPage" Title="DevEx" BackgroundImage="appback.jpg">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Label Text="REGISTRATION" Grid.Row="1" Grid.Column="1" Font = "17" TextColor="#ffffff"></Label>
+    <Entry  x:Name="Firstname" Placeholder="Name" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
+    <Entry x:Name="Surname" Placeholder="Surname" Grid.Column="0" Grid.Row="3"  Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
+    <Entry x:Name="Email" Placeholder="Email" Grid.Column="0" Grid.Row="4"  Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
+    
+    <Button x:Name="Register" Text="Register" BackgroundColor="#ffffff" Grid.Row="6" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="SubmitClicked" />
+  </Grid>
+</ContentPage>

@@ -17,6 +17,9 @@ namespace DevExMobileApp.UI {
     public partial class SubmitTopicPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry Topic_Field;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Picker presenterPicker;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -25,6 +28,7 @@ namespace DevExMobileApp.UI {
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(SubmitTopicPage));
+            Topic_Field = this.FindByName<global::Xamarin.Forms.Entry>("Topic_Field");
             presenterPicker = this.FindByName<global::Xamarin.Forms.Picker>("presenterPicker");
             Register = this.FindByName<global::Xamarin.Forms.Button>("Register");
         }

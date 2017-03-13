@@ -34,7 +34,50 @@ C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\De
 C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.DeviceInfo.Abstractions.xml
 C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.dll.mdb
 C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.dll.mdb
-C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.dll.mdb
-C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.dll.mdb
-C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.dll.mdb
-C:\Users\denzil.govender\documents\visual studio 2015\Projects\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.dll.mdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.pdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Newtonsoft.Json.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.DeviceInfo.Abstractions.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.DeviceInfo.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.Settings.Abstractions.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.Settings.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Net.Http.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Xamarin.Forms.Core.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\ZXing.Net.Mobile.Core.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\ZXing.Net.Mobile.Forms.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\zxing.portable.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\ZXingNetMobile.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Net.Primitives.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.DeviceInfo.pdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.DeviceInfo.xml
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.DeviceInfo.Abstractions.pdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.DeviceInfo.Abstractions.xml
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.Settings.xml
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Plugin.Settings.Abstractions.xml
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Net.Http.xml
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Xamarin.Forms.Core.xml
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Net.Primitives.xml
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.csprojResolveAssemblyReference.cache
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.UI.MainPage.xaml.g.cs
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.UI.AgendaPage.xaml.g.cs
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.UI.BlogsPage.xaml.g.cs
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.UI.SubmitTopicPage.xaml.g.cs
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.UI.BlogDetail.xaml.g.cs
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.pdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.UI.RegisterPage.xaml.g.cs
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.UI.RewardsPage.xaml.g.cs
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\crypto.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\Firebase.Xamarin.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\JWT.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Reactive.Core.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Reactive.Interfaces.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Reactive.Linq.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.dll.mdb
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.dll.mdb

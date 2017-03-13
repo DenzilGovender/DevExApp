@@ -2,12 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using DevExMobileApp.Models;
 
 using Xamarin.Forms;
 using ZXing.Mobile;
 using ZXing.Net.Mobile.Forms;
+
 
 namespace DevExMobileApp.UI
 {
@@ -17,7 +22,7 @@ namespace DevExMobileApp.UI
         public MainPage(string URL)
         {
             InitializeComponent();
-            //var platform = CrossDeviceInfo.Current.Platform;
+
             Browser.Source = URL;
             gridDashboard.RowSpacing = 5;
             DevexHeading.FontFamily = Device.OnPlatform("MarkerFelt-Thin", "Roboto", "Verdana");
@@ -36,6 +41,9 @@ namespace DevExMobileApp.UI
 
         async private void AgendaClicked(object sender, EventArgs e)
         {
+
+            await Navigation.PopAsync();
+
             var agendaPage = new AgendaPage();
             NavigationPage.SetBackButtonTitle(agendaPage, "Dashboard");
             await Navigation.PushAsync(agendaPage, true);
@@ -50,47 +58,68 @@ namespace DevExMobileApp.UI
 
         async private void BlogsClicked(object sender, EventArgs e)
         {
-            var blogsPage = new BlogsPage();
-            NavigationPage.SetBackButtonTitle(blogsPage, "Dashboard");
-            await Navigation.PushAsync(blogsPage, true);
+            //var blogsPage = new BlogsPage();
+            //NavigationPage.SetBackButtonTitle(blogsPage, "Dashboard");
+            //await Navigation.PushAsync(blogsPage, true);
+
+            var rewardsPage = new RewardsPage();
+            NavigationPage.SetBackButtonTitle(rewardsPage, "Dashboard");
+            await Navigation.PushAsync(rewardsPage, true);
         }
         async private void AttendanceClicked(object sender, EventArgs e)
         {
-            var scanPage = new ZXingScannerPage();
+            
 
-            var options = new MobileBarcodeScanningOptions
+            if (DevExMobileApp.Helpers.Settings.RegisteredDate != string.Empty && DateTime.Now.Month == Convert.ToDateTime(DevExMobileApp.Helpers.Settings.RegisteredDate).Month)
             {
-                AutoRotate = false,
-      
-                TryHarder = true,
-                PossibleFormats = new List<ZXing.BarcodeFormat>
+                await DisplayAlert("", "You have already confirmed your attendance", "OK");
+            }
+
+            else
+            {
+                var scanPage = new ZXingScannerPage();
+
+                var options = new MobileBarcodeScanningOptions
+                {
+                    TryHarder = true,
+                    PossibleFormats = new List<ZXing.BarcodeFormat>
                     {
                         ZXing.BarcodeFormat.QR_CODE
                     }
-            };
+                };
 
-            //add options and customize page
-            scanPage = new ZXingScannerPage(options)
-            {
-                DefaultOverlayTopText = "Align the barcode within the frame",
-                DefaultOverlayBottomText = string.Empty
-            };
+          
+                await Navigation.PushAsync(scanPage);
 
-           
-            await Navigation.PushAsync(scanPage);
-
-            scanPage.OnScanResult += (result) =>
-            {
+                scanPage.OnScanResult += (result) =>
+                {
                 // Stop scanning
                 scanPage.IsScanning = false;
 
                 // Pop the page and show the result
                 Device.BeginInvokeOnMainThread(async () =>
-                {
-                    await Navigation.PopAsync();
-                    await DisplayAlert("You have succesfully confirmed your attendance", result.Text, "OK");
-                });
-            };
+                    {
+
+                        await Navigation.PopAsync();
+                        await DisplayAlert("Confirmation", "You have succesfully confirmed your attendance", "OK");
+
+                        var person = new Person
+                        {
+                            Name = DevExMobileApp.Helpers.Settings.Firstname,
+                            Surname = DevExMobileApp.Helpers.Settings.Surname,
+                            Email = DevExMobileApp.Helpers.Settings.Email
+                        };
+
+                        string baseurl = "https://emailservicefunction.azurewebsites.net/api/HttpTriggerCSharp1?code=QY8syIpPCGfmGrQDmWiXHgeScIosi9m994RZ1YMVUaXsdcTr/yoFaw==";
+                        var client = new HttpClient();
+                        var jsonObject = JsonConvert.SerializeObject(person);
+                        var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
+                        var message = await client.PostAsync(baseurl, content);
+                        DevExMobileApp.Helpers.Settings.RegisteredDate = DateTime.Now.ToString();
+
+                    });
+                };
+            }
 
         }
 
@@ -110,5 +139,7 @@ namespace DevExMobileApp.UI
             Browser.IsVisible = false;
 
         }
+
+       
     }
 }

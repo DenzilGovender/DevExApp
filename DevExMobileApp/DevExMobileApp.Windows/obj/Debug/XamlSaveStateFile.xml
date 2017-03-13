@@ -1,9 +1,11 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
     <LocalAssembly PathName="c:\users\denzil.govender\documents\visual studio 2015\projects\devexmobileapp\devexmobileapp\devexmobileapp.windows\obj\debug\intermediatexaml\devexmobileapp.windows.exe" HashGuid="bc6f6b66-fe60-9a09-2666-25b1c729f9fa" />
-    <ReferenceAssembly PathName="c:\development\devexmobileapp\devexmobileapp\devexmobileapp\bin\debug\devexmobileapp.dll" HashGuid="769413f8-6c8e-0e4b-323c-0c8951f3ab81" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\devexmobileapp\devexmobileapp\bin\debug\devexmobileapp.dll" HashGuid="da76a451-dfc6-56a4-f124-ed79507a3dd4" />
     <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xam.plugin.deviceinfo.2.1.2\lib\win8\plugin.deviceinfo.abstractions.dll" HashGuid="70ebd9ea-8e74-de22-c8fc-a9cc2152adb3" />
     <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xam.plugin.deviceinfo.2.1.2\lib\win8\plugin.deviceinfo.dll" HashGuid="89e1e78b-424e-b63b-3c0e-37ea9cb836f4" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xam.plugins.settings.2.5.4\lib\win8\plugin.settings.abstractions.dll" HashGuid="980b2971-f9fe-95cd-97df-1f782f505122" />
+    <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xam.plugins.settings.2.5.4\lib\win8\plugin.settings.dll" HashGuid="46503c50-0e56-9e2b-1865-407c69d010e7" />
     <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xamarin.forms.2.2.0.45\lib\win81\xamarin.forms.core.dll" HashGuid="2a418b72-55c1-19a8-a363-4b8c348fbee0" />
     <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xamarin.forms.2.2.0.45\lib\win81\xamarin.forms.platform.dll" HashGuid="bb4040f4-26bb-5883-795e-627e39855666" />
     <ReferenceAssembly PathName="c:\development\devexmobileapp\packages\xamarin.forms.2.2.0.45\lib\win81\xamarin.forms.platform.winrt.dll" HashGuid="068a3578-03d9-2580-f12e-c531e1d2d71c" />

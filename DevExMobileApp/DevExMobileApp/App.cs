@@ -11,25 +11,35 @@ namespace DevExMobileApp
     {
         public App()
         {
-            // The root page of your application
-            //var content = new ContentPage
-            //{
-            //    Title = "DevEx",
-            //    Content = new StackLayout
-            //    {
-                
-            //Children = {
-            //            new WebView {
-            //            Source = "https://devex.azurewebsites.net",
-            //            WidthRequest = 1000,
-            //            HeightRequest = 1000
-            //            }
-            //        }
-            //    }
-            //};
+            DevExMobileApp.Helpers.Settings.Firstname = string.Empty;
+            DevExMobileApp.Helpers.Settings.Surname = string.Empty;
+            DevExMobileApp.Helpers.Settings.Email = string.Empty;
+            DevExMobileApp.Helpers.Settings.RegisteredDate = string.Empty;
+            //MainPage = new NavigationPage(new DevExMobileApp.UI.MainPage("https://devex.azurewebsites.net"));
 
-            MainPage = new NavigationPage(new DevExMobileApp.UI.MainPage("https://devex.azurewebsites.net"));
-            
+            if (IsRegistered())
+            {
+                MainPage = new NavigationPage(new DevExMobileApp.UI.MainPage("https://devex.azurewebsites.net"));
+            }
+            else
+            {
+
+                MainPage = new NavigationPage(new DevExMobileApp.UI.RegisterPage());
+
+            }
+
+        }
+
+        private bool IsRegistered()
+        {
+            if (DevExMobileApp.Helpers.Settings.Firstname != string.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         protected override void OnStart()
