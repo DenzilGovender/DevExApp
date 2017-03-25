@@ -11,15 +11,15 @@ namespace DevExMobileApp
     {
         public App()
         {
-            DevExMobileApp.Helpers.Settings.Firstname = string.Empty;
-            DevExMobileApp.Helpers.Settings.Surname = string.Empty;
-            DevExMobileApp.Helpers.Settings.Email = string.Empty;
-            DevExMobileApp.Helpers.Settings.RegisteredDate = string.Empty;
+            //DevExMobileApp.Helpers.Settings.Firstname = string.Empty;
+            //DevExMobileApp.Helpers.Settings.Surname = string.Empty;
+            //DevExMobileApp.Helpers.Settings.Email = string.Empty;
+            //DevExMobileApp.Helpers.Settings.RegisteredDate = string.Empty;
             //MainPage = new NavigationPage(new DevExMobileApp.UI.MainPage("https://devex.azurewebsites.net"));
 
             if (IsRegistered())
             {
-                MainPage = new NavigationPage(new DevExMobileApp.UI.MainPage("https://devex.azurewebsites.net"));
+                MainPage = new NavigationPage(new DevExMobileApp.UI.MainPage());
             }
             else
             {

@@ -39,12 +39,12 @@ C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\andr
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Diagnostics.Tools.dll
-C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Net.Http.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Threading.Tasks.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\Firebase.Xamarin.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Runtime.Extensions.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.ObjectModel.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Reflection.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Net.Http.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.IO.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Reactive.Linq.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\android\assets\System.Reactive.Core.dll

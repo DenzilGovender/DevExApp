@@ -17,13 +17,10 @@ namespace DevExMobileApp.UI {
     public partial class MainPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ActivityIndicator loader;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.WebView Browser;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Grid gridDashboard;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label DevexHeading1;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label DevexHeading;
@@ -43,9 +40,8 @@ namespace DevExMobileApp.UI {
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MainPage));
-            loader = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("loader");
-            Browser = this.FindByName<global::Xamarin.Forms.WebView>("Browser");
             gridDashboard = this.FindByName<global::Xamarin.Forms.Grid>("gridDashboard");
+            DevexHeading1 = this.FindByName<global::Xamarin.Forms.Label>("DevexHeading1");
             DevexHeading = this.FindByName<global::Xamarin.Forms.Label>("DevexHeading");
             Agenda = this.FindByName<global::Xamarin.Forms.Button>("Agenda");
             Register = this.FindByName<global::Xamarin.Forms.Button>("Register");

@@ -22,7 +22,7 @@ namespace DevExMobileApp.UI
 
         private async void SubmitClicked(Object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new MainPage("https://devex.azurewebsites.net"));
+            Application.Current.MainPage = new NavigationPage(new MainPage());
 
             DevExMobileApp.Helpers.Settings.Firstname = Firstname.Text;
             DevExMobileApp.Helpers.Settings.Surname = Surname.Text;
@@ -30,26 +30,7 @@ namespace DevExMobileApp.UI
             await DisplayAlert("", "Registration Successfull", "Ok");
             await Navigation.PopToRootAsync();
 
-            var reward = new Reward
-            {
-                Kudos = 5,
-                NoOfSessionsAttended = 10,
-                NoOfSessionsPresented = 20,
-                Rewardee = new Person
-                {
-                    Email = "email",
-                    Name = "sadas",
-                    Surname = "asdsa"
-                }
-            };
-
-            var jsonObject = JsonConvert.SerializeObject(reward);
-
-            var firebase = new FirebaseClient("https://devex-6d4d1.firebaseio.com");
-            var item = await firebase
-              .Child("Rewards")
-              //.WithAuth(auth.FirebaseToken) // <-- Add Auth token if required. Auth instructions further down in readme.
-              .PostAsync(reward);
+            
         }
     }
 }

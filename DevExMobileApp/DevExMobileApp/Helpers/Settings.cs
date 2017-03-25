@@ -19,7 +19,10 @@ namespace DevExMobileApp.Helpers
       }
     }
 
-    #region Setting Constants
+        #region Setting Constants
+
+    private const string userID_key = "user_ID";
+    private static readonly string userID_value = string.Empty;
 
     private const string first_name_key = "first_name";
     private static readonly string first_name_value = string.Empty;
@@ -33,8 +36,23 @@ namespace DevExMobileApp.Helpers
     private const string registered_key = "isregistered";
     private static readonly string registered_value = string.Empty;
 
+    private const string scannedkudos_key = "iskudosscanned";
+    private static readonly string scannedkudos_value = string.Empty;
+
         #endregion
 
+        public static string UserID
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault<string>(userID_key, userID_value);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue<string>(userID_key, value);
+            }
+
+        }
 
         public static string Firstname
     {
@@ -85,6 +103,19 @@ namespace DevExMobileApp.Helpers
             set
             {
                 AppSettings.AddOrUpdateValue<string>(registered_key, value);
+            }
+
+        }
+
+        public static string ScannedKudosDate
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault<string>(scannedkudos_key, scannedkudos_value);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue<string>(scannedkudos_key, value);
             }
 
         }

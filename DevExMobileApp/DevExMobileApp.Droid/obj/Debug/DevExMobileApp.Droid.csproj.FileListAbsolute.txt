@@ -215,5 +215,15 @@ C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\bin\Debug\Syst
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\bin\Debug\JWT.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\bin\Debug\System.Reactive.Interfaces.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\bin\Debug\crypto.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\agent.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\blog.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\calander.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\chat.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\devex.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\loadingicon.gif
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\night1.jpg
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\register.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\topic.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\whitechat.png
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\DevExMobileApp.Droid.dll.mdb
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\bin\Debug\DevExMobileApp.Droid.dll.mdb
