@@ -81,5 +81,3 @@ C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Rea
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Reactive.Linq.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.dll.mdb
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.dll.mdb
-C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.dll.mdb
-C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.dll.mdb

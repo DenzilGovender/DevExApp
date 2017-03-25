@@ -17,20 +17,12 @@ namespace DevExMobileApp.UI {
     public partial class AgendaPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Entry Topic_Field;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Picker presenterPicker;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Button Register;
+        private global::Xamarin.Forms.ActivityIndicator activityIndicator;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(AgendaPage));
-            Topic_Field = this.FindByName<global::Xamarin.Forms.Entry>("Topic_Field");
-            presenterPicker = this.FindByName<global::Xamarin.Forms.Picker>("presenterPicker");
-            Register = this.FindByName<global::Xamarin.Forms.Button>("Register");
+            activityIndicator = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("activityIndicator");
         }
     }
 }
