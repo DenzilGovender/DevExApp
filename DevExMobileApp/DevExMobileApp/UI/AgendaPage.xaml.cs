@@ -28,11 +28,17 @@ namespace DevExMobileApp.UI
 
         private async void GetAgenda()
         {
+            try
+            {
+                activityIndicator.IsRunning = true;
+                activityIndicator.IsVisible = true;
+                var firebase = new FirebaseClient("https://devex-6d4d1.firebaseio.com");
+                Agenda = await firebase.Child("Agenda").OnceSingleAsync<Agenda>();
+            }
+            catch
+            {
 
-            activityIndicator.IsRunning = true;
-            activityIndicator.IsVisible = true;
-            var firebase = new FirebaseClient("https://devex-6d4d1.firebaseio.com");
-            Agenda = await firebase.Child("Agenda").OnceSingleAsync<Agenda>();
+            }
            
 
 

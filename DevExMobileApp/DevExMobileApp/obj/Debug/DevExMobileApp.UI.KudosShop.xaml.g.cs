@@ -14,19 +14,11 @@ namespace DevExMobileApp.UI {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class RewardsPage : global::Xamarin.Forms.ContentPage {
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ActivityIndicator activityIndicator;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ListView listView;
+    public partial class KudosShop : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(RewardsPage));
-            activityIndicator = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("activityIndicator");
-            listView = this.FindByName<global::Xamarin.Forms.ListView>("listView");
+            this.LoadFromXaml(typeof(KudosShop));
         }
     }
 }

@@ -79,5 +79,6 @@ C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\JWT.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Reactive.Core.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Reactive.Interfaces.dll
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\System.Reactive.Linq.dll
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.UI.KudosShop.xaml.g.cs
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\obj\Debug\DevExMobileApp.dll.mdb
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp\bin\Debug\DevExMobileApp.dll.mdb
