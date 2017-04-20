@@ -9,6 +9,8 @@ using Firebase.Xamarin.Database;
 using Xamarin.Forms;
 using DevExMobileApp.Models;
 using Firebase.Xamarin.Database.Query;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace DevExMobileApp.UI
 {
@@ -115,12 +117,69 @@ namespace DevExMobileApp.UI
             if (shop == null)
                 return;
 
-            var answer = await DisplayAlert("Confirm", "Are you sure you want to purchase this item?", "Yes", "No");
-            if (answer)
+            //check if user has enough kudos
+            var priceOfItem = Convert.ToInt32(shop.Price.Substring(0, shop.Price.Length - 2));
+
+            if (reward.Kudos < priceOfItem)
             {
-               
+                await DisplayAlert("", "You don't have enough Kudos to purchase this item?", "OK");
+                return;
+            }
+            else
+            {
+
+                var answer = await DisplayAlert("Confirm", "Are you sure you want to purchase this item?", "Yes", "No");
+                if (answer)
+                {
+                    //add transaction
+
+                    var transaction = new Transaction
+                    {
+                        TransactionItem = shop,
+                        TransactionDate = DateTime.Now,
+                        UserId = DevExMobileApp.Helpers.Settings.UserID,
+                        Transactor = new Person
+                        {
+                            Name = DevExMobileApp.Helpers.Settings.Firstname,
+                            Surname = DevExMobileApp.Helpers.Settings.Surname,
+                            Email = DevExMobileApp.Helpers.Settings.Email
+                        }
+                    };
+
+                    var jsonObject = JsonConvert.SerializeObject(transaction);
+                    var firebase = new FirebaseClient("https://devex-6d4d1.firebaseio.com");
+
+                    var item = await firebase
+                      .Child("Transactions")
+                      .PostAsync(transaction);
+
+                    //subtract Kudos
+                    var newReward = reward;
+                    newReward.Kudos = reward.Kudos - priceOfItem;
+                    Reward = newReward;
+                    EditRewardsInDataBase(Reward);
+                    SendEmailConfirmation(transaction);
+                }
             }
 
+        }
+
+        private async void EditRewardsInDataBase(Reward reward)
+        {
+            
+            var jsonObject = JsonConvert.SerializeObject(reward);
+            var firebase = new FirebaseClient("https://devex-6d4d1.firebaseio.com");
+            await firebase.Child("Rewards").Child(DevExMobileApp.Helpers.Settings.UserID).PutAsync(reward);
+
+        }
+
+        private async void SendEmailConfirmation(Transaction transaction)
+        {
+            string baseurl = "https://emailservicefunction.azurewebsites.net/api/PurchaseConfirmation?code=V9xydrZuW8/2hzZffrkaYZaRw0DjRYNTO1T9PSFRDfJlSUQ6kh80Sw==";
+            var client = new HttpClient();
+            var jsonObject = JsonConvert.SerializeObject(transaction);
+            var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
+            var message = await client.PostAsync(baseurl, content);
         }
     }
 }

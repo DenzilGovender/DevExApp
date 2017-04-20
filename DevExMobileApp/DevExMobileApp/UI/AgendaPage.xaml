@@ -1,44 +1,131 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DevExMobileApp.UI.AgendaPage" Title="Agenda" NavigationPage.BackButtonTitle="Dashboard" BackgroundImage="appback.jpg">
-  <ScrollView>
-  <Grid RowSpacing="5">
-    <Grid.RowDefinitions>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevExMobileApp.UI.AgendaPage"
+             Title="Agenda"
+             NavigationPage.BackButtonTitle="Dashboard"
+             BackgroundColor="#efefef"
+             >
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <!-- Colors -->
+      <Color x:Key="CIPrimaryColor">#1971af</Color>
+      <Color x:Key="CISecondaryColor">#FFCCCCCC</Color>
+      <Color x:Key="CITersiaryColor">#38abab</Color>
+      <Color x:Key="CIWhite">#ffffff</Color>
+      <Color x:Key="CIGray">#7b7b7b</Color>
+      <Color x:Key="CIDarkGray">#596268</Color>
 
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      
-    </Grid.RowDefinitions>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="*" />
-      <ColumnDefinition Width="*" />
-      <ColumnDefinition Width="*" />
-    </Grid.ColumnDefinitions>
-    <ActivityIndicator x:Name="activityIndicator" IsRunning="True" Grid.Row="3" Grid.Column="1"></ActivityIndicator>
-    <Label Text="{Binding Agenda.Venue}" Grid.Row="1" TextColor="White" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center"></Label>
-    <Label Text="{Binding Agenda.Time}" Grid.Row="1" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center"></Label>
-    <Image Source="{Binding Agenda.Sessions[0].Picture}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2"></Image>
-    <Label Text="{Binding Agenda.Sessions[0].Speaker}" Grid.Row="4" TextColor="White" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-    <Label Text="{Binding Agenda.Sessions[0].Topic}" Grid.Row="5" TextColor="White" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-    <Label Text="{Binding Agenda.Sessions[0].Summary}" Grid.Row="6" TextColor="White" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+    </ResourceDictionary>
+  </ContentPage.Resources>
 
-    <Image Source="{Binding Agenda.Sessions[1].Picture}" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2"></Image>
-    <Label Text="{Binding Agenda.Sessions[1].Speaker}" Grid.Row="10" TextColor="White" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-    <Label Text="{Binding Agenda.Sessions[1].Topic}" Grid.Row="11" TextColor="White" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-    <Label Text="{Binding Agenda.Sessions[1].Summary}" Grid.Row="12" TextColor="White" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-  </Grid>
-  </ScrollView>
+
+
+  <StackLayout>
+
+
+
+    <Grid BackgroundColor="{StaticResource CIPrimaryColor}"
+          Padding="15">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="45"></RowDefinition>
+        <RowDefinition Height="15"></RowDefinition>
+        <RowDefinition Height="15"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Label Text="DevEx Presention Time"
+             TextColor="White"
+             Margin="0,15,0,0"
+             Grid.Column="0"
+             Grid.Row="0"
+             HorizontalTextAlignment="Start"></Label>
+      <Label Text="{Binding Agenda.Venue}"
+             TextColor="White"
+             HorizontalTextAlignment="Start"
+             Grid.Column="0"
+             Grid.Row="1"></Label>
+      <Label Text="{Binding Agenda.Time}"
+             TextColor="White"
+             HorizontalTextAlignment="Start"
+             Grid.Column="0"
+             Grid.Row="3"
+                   
+             Margin='0,-15,5,5'></Label>
+      <Image Source="Time.png"
+             Grid.Column="1"
+             HorizontalOptions="End"
+             Grid.Row="0"
+             Grid.RowSpan="3"></Image>
+    </Grid>
+
+
+    <ScrollView>
+      <StackLayout Padding="15,15,15,25">
+        <ActivityIndicator x:Name="activityIndicator"
+                           IsRunning="True"
+                           Grid.Row="3"
+                           Grid.Column="1"></ActivityIndicator>
+        <!-- List Item-->
+        <StackLayout BackgroundColor="{StaticResource CIWhite}"
+                     Padding="15">
+          <Image Source="{Binding Agenda.Sessions[0].Picture}"></Image>
+          <Label Font="Bold,16"
+                 Text="{Binding Agenda.Sessions[0].Speaker}"
+                 TextColor="{StaticResource CIDarkGray}"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"></Label>
+          <Label Text="{Binding Agenda.Sessions[0].Topic}"
+                 TextColor="{StaticResource CIPrimaryColor}"
+                 Font="Bold,12"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"></Label>
+          <Label Text="{Binding Agenda.Sessions[0].Summary}"
+                 TextColor="{StaticResource CIGray}"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"></Label>
+        </StackLayout>
+        <!-- List Item-->
+        <StackLayout BackgroundColor="{StaticResource CIWhite}"
+                     Padding="15">
+          <Image Source="{Binding Agenda.Sessions[1].Picture}"
+                 Grid.Row="8"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="3"
+                 Grid.RowSpan="2"></Image>
+          <Label Text="{Binding Agenda.Sessions[1].Speaker}"
+                 Grid.Row="10"
+                 Font="Bold,16"
+                 TextColor="{StaticResource CIDarkGray}"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="3"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"></Label>
+          <Label Text="{Binding Agenda.Sessions[1].Topic}"
+                 Grid.Row="11"
+                 Font="Bold,12"
+                 TextColor="{StaticResource CIPrimaryColor}"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="3"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"></Label>
+          <Label Text="{Binding Agenda.Sessions[1].Summary}"
+                 Grid.Row="12"
+                 TextColor="{StaticResource CIGray}"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="3"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"></Label>
+        </StackLayout>
+
+      </StackLayout>
+    </ScrollView>
+
+  </StackLayout>
+
+
+
+
 </ContentPage>

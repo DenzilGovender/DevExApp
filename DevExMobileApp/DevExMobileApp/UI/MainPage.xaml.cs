@@ -148,6 +148,7 @@ namespace DevExMobileApp.UI
                 }
                 // check to see if person already scanned for points
                 int ConvertedPoints = Convert.ToInt32(points.Substring(points.Length - 2));
+                //DateTime ConvertedDate = Convert.ToDateTime(points.Substring(0,8));
 
                 //Get record from firebase for user
                 var firebase = new FirebaseClient("https://devex-6d4d1.firebaseio.com");
@@ -168,7 +169,7 @@ namespace DevExMobileApp.UI
             }
             catch
             {
-                await DisplayAlert("", "There was an issue, Please try again later", "OK");
+                await DisplayAlert("","An error has occurred, Please try again later", "OK");
             }
 
         }

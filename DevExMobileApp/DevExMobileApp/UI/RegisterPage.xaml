@@ -1,28 +1,112 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevExMobileApp.UI.RegisterPage" Title="DevEx" BackgroundImage="appback.jpg">
-  <Grid>
-    <Grid.RowDefinitions>
+             x:Class="DevExMobileApp.UI.RegisterPage"
+             Title="DevEx"
+             BackgroundImage="appback.jpg"
+             Padding="15,15,15,25">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <!-- Colors -->
+      <Color x:Key="CIPrimaryColor">#1971af</Color>
+      <Color x:Key="CISecondaryColor">#FFCCCCCC</Color>
+      <Color x:Key="CITersiaryColor">#38abab</Color>
+
+      <Color x:Key="CIWhite">#ffffff</Color>
+
+
+      <!--Buttons-->
+      <Style x:Key="ButtonStyle"
+             TargetType="Button">
+        <Setter Property="TextColor"
+                Value="{StaticResource CIWhite}" />
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource CIPrimaryColor}" />
+
+        <Setter Property="BorderRadius"
+                Value="145" />
+
+        <Setter Property="ContentLayout"
+                Value="right,5" />
+      </Style>
+
+
+      <!-- Labels -->
+      <Style x:Key="HeadingLabelStyle"
+             TargetType="Label">
+        <Setter Property="FontSize"
+                Value="48" />
+        <Setter Property="VerticalTextAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalTextAlignment"
+                Value="Center" />
+        <Setter Property="LineBreakMode"
+                Value="WordWrap" />
+        <Setter Property="TextColor"
+                Value="{StaticResource CIPrimaryColor}" />
+
+      </Style>
+
+      <Style x:Key="SubHeadingLabelStyle"
+             TargetType="Label">
+        <Setter Property="FontSize"
+                Value="16" />
+        <Setter Property="VerticalTextAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalTextAlignment"
+                Value="Center" />
+      </Style>
+
+
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <Grid
+        BackgroundColor="White"
+        Margin="0,0,0,5"
+        Padding="15">
+    <Grid.RowDefinitions >
+      <RowDefinition Height="65"/>
       <RowDefinition Height="*"/>
       <RowDefinition Height="*"/>
       <RowDefinition Height="*"/>
       <RowDefinition Height="*"/>
       <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*"/>
+      <RowDefinition Height="45"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
-      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="165" />
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
-    <Label Text="REGISTRATION" Grid.Row="1" Grid.Column="1" Font = "17" TextColor="#ffffff"></Label>
-    <Entry  x:Name="Firstname" Placeholder="Name" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
-    <Entry x:Name="Surname" Placeholder="Surname" Grid.Column="0" Grid.Row="3"  Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
-    <Entry x:Name="Email" Placeholder="Email" Grid.Column="0" Grid.Row="4"  Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
-    
-    <Button x:Name="Register" Text="Register" BackgroundColor="#ffffff" Grid.Row="6" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="SubmitClicked" />
+
+    <Label x:Name="DevexHeading1"
+           Text="DevEx"
+           Grid.Row="0"
+           Grid.ColumnSpan="3"
+           Grid.RowSpan="1"
+           Style="{StaticResource HeadingLabelStyle}"></Label>
+
+    <Label x:Name="DevexHeading"
+           Text="Please register before using the DevEx App"
+           Grid.Row="1"
+           Grid.ColumnSpan="3"
+           Grid.RowSpan="1"
+           Style="{StaticResource SubHeadingLabelStyle}"></Label>
+
+    <Entry  x:Name="Firstname" Placeholder="Name" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"></Entry>
+    <Entry x:Name="Surname" Placeholder="Surname" Grid.Column="0" Grid.Row="3"  Grid.ColumnSpan="3"></Entry>
+    <Entry x:Name="Email" Placeholder="Email" Grid.Column="0" Grid.Row="4"  Grid.ColumnSpan="3"></Entry>
+
+    <Button x:Name="Register"
+            Text="Register"
+            Image="btnSubmit.png"
+            VerticalOptions="Start"
+                
+            Style="{StaticResource ButtonStyle}"
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="1"
+            Clicked="SubmitClicked" />
   </Grid>
 </ContentPage>

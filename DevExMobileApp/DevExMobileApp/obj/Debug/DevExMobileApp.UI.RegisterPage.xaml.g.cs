@@ -17,6 +17,12 @@ namespace DevExMobileApp.UI {
     public partial class RegisterPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label DevexHeading1;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label DevexHeading;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Entry Firstname;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -31,6 +37,8 @@ namespace DevExMobileApp.UI {
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(RegisterPage));
+            DevexHeading1 = this.FindByName<global::Xamarin.Forms.Label>("DevexHeading1");
+            DevexHeading = this.FindByName<global::Xamarin.Forms.Label>("DevexHeading");
             Firstname = this.FindByName<global::Xamarin.Forms.Entry>("Firstname");
             Surname = this.FindByName<global::Xamarin.Forms.Entry>("Surname");
             Email = this.FindByName<global::Xamarin.Forms.Entry>("Email");

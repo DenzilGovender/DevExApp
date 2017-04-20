@@ -45,6 +45,7 @@
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\Shop.cs" />
     <Compile Include="Models\Topic.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\AgendaPage.xaml.cs">
       <DependentUpon>AgendaPage.xaml</DependentUpon>

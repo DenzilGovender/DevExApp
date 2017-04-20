@@ -1,8 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevExMobileApp.UI.SubmitTopicPage" BackgroundImage="appback.jpg" Title="Submit a Topic">
-  <Grid>
+             x:Class="DevExMobileApp.UI.SubmitTopicPage"
+             BackgroundColor="#efefef"
+             Padding="15,15,15,25"
+             Title="Submit a Topic">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <!-- Colors -->
+      <Color x:Key="CIPrimaryColor">#1971af</Color>
+      <Color x:Key="CISecondaryColor">#FFCCCCCC</Color>
+      <Color x:Key="CITersiaryColor">#38abab</Color>
+
+      <Color x:Key="CIWhite">#ffffff</Color>
+
+
+      <!--Buttons-->
+      <Style x:Key="ButtonStyle"
+             TargetType="Button">
+        <Setter Property="TextColor"
+                Value="{StaticResource CIWhite}" />
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource CIPrimaryColor}" />
+
+        <Setter Property="BorderRadius"
+                Value="145" />
+
+        <Setter Property="ContentLayout"
+                Value="right,5" />
+      </Style>
+
+
+      <!-- Labels -->
+      <Style x:Key="HeadingLabelStyle"
+             TargetType="Label">
+        <Setter Property="FontSize"
+                Value="48" />
+        <Setter Property="VerticalTextAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalTextAlignment"
+                Value="Center" />
+        <Setter Property="LineBreakMode"
+                Value="WordWrap" />
+        <Setter Property="TextColor"
+                Value="{StaticResource CIPrimaryColor}" />
+
+      </Style>
+
+      <Style x:Key="SubHeadingLabelStyle"
+             TargetType="Label">
+        <Setter Property="FontSize"
+                Value="16" />
+        <Setter Property="VerticalTextAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalTextAlignment"
+                Value="Center" />
+      </Style>
+
+
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <Grid BackgroundColor="White"
+        Margin="0,0,0,5"
+        Padding="15">
     <Grid.RowDefinitions>
       <RowDefinition Height="*"/>
       <RowDefinition Height="*"/>
@@ -15,18 +75,27 @@
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
-      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="165" />
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
-    <Entry x:Name="Topic_Field" Placeholder="Topic" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" TextColor="#ffffff"></Entry>
-    <Picker x:Name="presenterPicker" Title="Do you wish to present this topic?" Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="3">
+
+
+    <Entry x:Name="Topic_Field" Placeholder="Topic" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"></Entry>
+    <Picker x:Name="presenterPicker" Title="Do you wish to present this topic?" Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="3">
       <Picker.Items>
         <x:String>Yes</x:String>
         <x:String>No</x:String>
       </Picker.Items>
     </Picker>
-    <Button x:Name="Register" Text="Submit" BackgroundColor="#ffffff" Grid.Row="4" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="SubmitClicked" />
+
+    <Button x:Name="Register"
+            Text="Submit"
+            Image="submit.png"
+            VerticalOptions="Start"
+            Style="{StaticResource ButtonStyle}"
+            HorizontalOptions="Start"
+            Grid.Row="2" Grid.Column="1"  Clicked="SubmitClicked" />
   </Grid>
-  
-  
+
+
 </ContentPage>

@@ -15,6 +15,7 @@ namespace DevExMobileApp
             //DevExMobileApp.Helpers.Settings.Surname = string.Empty;
             //DevExMobileApp.Helpers.Settings.Email = string.Empty;
             //DevExMobileApp.Helpers.Settings.RegisteredDate = string.Empty;
+           // DevExMobileApp.Helpers.Settings.ScannedKudosDate = null;
             //MainPage = new NavigationPage(new DevExMobileApp.UI.MainPage("https://devex.azurewebsites.net"));
 
             if (IsRegistered())

@@ -1,79 +1,169 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevExMobileApp.UI.RewardsPage" BackgroundImage="appback.jpg">
-  
-    <StackLayout Orientation="Vertical"  Padding="20,20,20,20">
-      <Grid>
-        <Grid.RowDefinitions>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
+             x:Class="DevExMobileApp.UI.RewardsPage"
+             BackgroundColor="#efefef"
+             Title="Kudos-Rewards">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <!-- Colors -->
+      <Color x:Key="CIPrimaryColor">#1971af</Color>
+      <Color x:Key="CISecondaryColor">#FFCCCCCC</Color>
+      <Color x:Key="CITersiaryColor">#38abab</Color>
+      <Color x:Key="CIDarkBlue">#113752</Color>
 
 
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*" />
-          <ColumnDefinition Width="*" />
-          <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <ActivityIndicator x:Name="activityIndicator" IsRunning="True" Grid.Row="4" Grid.Column="1"></ActivityIndicator>
-        <BoxView Color="White" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
-        <Label Text="{Binding Name}" Grid.Row="1" Grid.Column="1"  HorizontalTextAlignment="Center"></Label>
-       
+      <Color x:Key="CIWhite">#ffffff</Color>
 
-        <Label Text="{Binding Reward.Kudos}" Grid.Row="2"  Grid.Column="0"  HorizontalTextAlignment="Center"></Label>
-        <Label Text="{Binding Reward.NoOfSessionsAttended}" Grid.Row="2"  Grid.Column="1"  HorizontalTextAlignment="Center"></Label>
-        <Label Text="{Binding Reward.NoOfSessionsPresented}" Grid.Row="2" Grid.Column="2"  HorizontalTextAlignment="Center"></Label>
-        <Label Text="Kudos" Grid.Row="3"  Grid.Column="0"  HorizontalTextAlignment="Center"></Label>
-        <Label Text="Attended" Grid.Row="3"  Grid.Column="1"  HorizontalTextAlignment="Center"></Label>
-        <Label Text="Presented" Grid.Row="3" Grid.Column="2"  HorizontalTextAlignment="Center"></Label>
+      <!-- Labels -->
+      <Style x:Key="HeadingLabelStyle"
+             TargetType="Label">
+        <Setter Property="FontSize"
+                Value="16" />
+        <Setter Property="VerticalTextAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalTextAlignment"
+                Value="Center" />
+        <Setter Property="TextColor"
+                Value="{StaticResource CIWhite}" />
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource CIPrimaryColor}" />
+
+      </Style>
+
+      <Style x:Key="ListItemStyleProduct"
+             TargetType="Label">
+        <Setter Property="FontSize"
+                Value="16" />
+        <Setter Property="VerticalTextAlignment"
+                Value="Start" />
+        <Setter Property="HorizontalTextAlignment"
+                Value="Start" />
+        <Setter Property="TextColor"
+                Value="{StaticResource CIPrimaryColor}" />
+      </Style>
 
 
-      </Grid>
 
 
-      <ListView x:Name="listView" RowHeight="100" ItemTapped="Handle_ItemTapped"
-              ItemSelected="Handle_ItemSelected"  BackgroundColor="Transparent"
-                 SeparatorVisibility="None">
-        <ListView.ItemTemplate>
-          <DataTemplate>
-            <ViewCell>
-              <Grid BackgroundColor="White" Margin="0,0,0,5" >
-                <Grid.RowDefinitions>
-                  <RowDefinition Height="*" />
-                  <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="*" />
-                  <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout Orientation="Vertical"
+               Padding="10,10,10,10">
+    <Grid RowSpacing="2"
+          ColumnSpacing="2"
+          Margin="0,-30,0,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
 
-                <Image Source="{Binding Picture}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"></Image>
-                <StackLayout Grid.Column="1" Grid.Row="0">
-                  <Label Text="{Binding Product}"
-                         VerticalTextAlignment="Center" HorizontalTextAlignment="Start"
-                         LineBreakMode="TailTruncation"
-                         FontSize="10" TextColor="Red"/>
-                  <Label Text="{Binding Description}"
-                         VerticalTextAlignment="Start"  HorizontalTextAlignment="Start"
-                         LineBreakMode="WordWrap"
-                         FontSize="8"/>
-                </StackLayout>
-                
-                <Label Text="{Binding Price}" Grid.Column="1" Grid.Row="1"
-                       VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"
-                       LineBreakMode="TailTruncation"
-                       FontSize="14" TextColor="Red"/>
 
-              </Grid>
-            </ViewCell>
-          </DataTemplate>
-        </ListView.ItemTemplate>
-      </ListView>
-    </StackLayout>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <ActivityIndicator x:Name="activityIndicator"
+                         IsRunning="True"
+                         Grid.Row="4"
+                         Grid.Column="1"
+                         Color="{StaticResource CIPrimaryColor}"></ActivityIndicator>
+      <BoxView Color="White"
+               Grid.Row="1"
+               Grid.ColumnSpan="3"
+               Grid.RowSpan="3" />
+      <Label Text="{Binding Name}"
+             Grid.Row="1"
+             Grid.Column="0"
+             Grid.ColumnSpan="3"
+             HorizontalTextAlignment="Center"
+             Style="{StaticResource HeadingLabelStyle}"></Label>
 
- 
-  </ContentPage>
+
+      <Label Text="{Binding Reward.Kudos}"
+             Grid.Row="2"
+             Grid.Column="0"
+             HorizontalTextAlignment="Center"></Label>
+      <Label Text="{Binding Reward.NoOfSessionsAttended}"
+             Grid.Row="2"
+             Grid.Column="1"
+             HorizontalTextAlignment="Center"></Label>
+      <Label Text="{Binding Reward.NoOfSessionsPresented}"
+             Grid.Row="2"
+             Grid.Column="2"
+             HorizontalTextAlignment="Center"></Label>
+      <Label Text="Kudos"
+             Grid.Row="3"
+             Grid.Column="0"
+             Style="{StaticResource HeadingLabelStyle}"></Label>
+      <Label  Text="Attended"
+              Grid.Row="3"
+              Grid.Column="1"
+              Style="{StaticResource HeadingLabelStyle}"></Label>
+      <Label Text="Presented"
+             Grid.Row="3"
+             Grid.Column="2"
+             Style="{StaticResource HeadingLabelStyle}"></Label>
+
+
+    </Grid>
+
+
+    <ListView x:Name="listView"
+              RowHeight="100"
+              ItemTapped="Handle_ItemTapped"
+              ItemSelected="Handle_ItemSelected"
+              BackgroundColor="Transparent"
+              SeparatorVisibility="None"
+              Margin="0,-30,0,0">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid BackgroundColor="White"
+                  Padding="5"
+                              >
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+              </Grid.ColumnDefinitions>
+
+              <Image Source="{Binding Picture}"
+                     Grid.Column="0"
+                     Grid.Row="0"
+                     Grid.RowSpan="3"></Image>
+
+              <Label Text="{Binding Product}"
+                     LineBreakMode="TailTruncation"
+                     Style="{StaticResource ListItemStyleProduct}"
+                     Grid.Column="1"
+                     Grid.Row="0" />
+              <Label Text="{Binding Description}"
+                     LineBreakMode="WordWrap"
+                     FontSize="10"
+                     Grid.Column="1"
+                     Grid.Row="1" />
+              <Label Text="{Binding Price}"
+                     LineBreakMode="TailTruncation"
+                     FontSize="14"
+                     TextColor="{StaticResource CIDarkBlue}"
+                     Grid.Column="1"
+                     Grid.Row="2" />
+
+            </Grid>
+
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+
+
+</ContentPage>

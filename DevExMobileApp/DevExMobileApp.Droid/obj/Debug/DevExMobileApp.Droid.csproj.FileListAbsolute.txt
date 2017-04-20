@@ -225,5 +225,13 @@ C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\register.png
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\topic.png
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\whitechat.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\pencil.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\submit.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\time.png
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\agendaicon.jpg
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\kudosicon.jpg
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\qricon.jpg
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\topicicon.jpg
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\res\drawable\topicicon2.png
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\obj\Debug\DevExMobileApp.Droid.dll.mdb
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.Droid\bin\Debug\DevExMobileApp.Droid.dll.mdb
