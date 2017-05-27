@@ -101,9 +101,8 @@ C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimula
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimulator\Debug\optimized\topicIcon2.png
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimulator\Debug\optimized\whitechat.png
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimulator\Debug\DevExMobileApp.iOS.csprojResolveAssemblyReference.cache
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimulator\Debug\DevExMobileApp.iOS.exe
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimulator\Debug\DevExMobileApp.iOS.pdb
-C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimulator\Debug\DevExMobileApp.iOS.csprojResolveAssemblyReference.cache
-C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\bin\iPhoneSimulator\Debug\DevExMobileApp.dll.mdb
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\obj\iPhoneSimulator\Debug\DevExMobileApp.iOS.exe.mdb
 C:\Development\DevExMobileApp\DevExMobileApp\DevExMobileApp.iOS\bin\iPhoneSimulator\Debug\DevExMobileApp.iOS.exe.mdb

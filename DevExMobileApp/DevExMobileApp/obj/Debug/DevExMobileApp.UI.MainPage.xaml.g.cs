@@ -20,7 +20,7 @@ namespace DevExMobileApp.UI {
         private global::Xamarin.Forms.Grid gridDashboard;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Label DevexHeading1;
+        private global::Xamarin.Forms.ActivityIndicator activityIndicator;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label DevexHeading;
@@ -41,7 +41,7 @@ namespace DevExMobileApp.UI {
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MainPage));
             gridDashboard = this.FindByName<global::Xamarin.Forms.Grid>("gridDashboard");
-            DevexHeading1 = this.FindByName<global::Xamarin.Forms.Label>("DevexHeading1");
+            activityIndicator = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("activityIndicator");
             DevexHeading = this.FindByName<global::Xamarin.Forms.Label>("DevexHeading");
             Agenda = this.FindByName<global::Xamarin.Forms.Button>("Agenda");
             Register = this.FindByName<global::Xamarin.Forms.Button>("Register");

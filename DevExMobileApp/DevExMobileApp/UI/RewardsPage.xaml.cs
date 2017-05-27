@@ -122,7 +122,7 @@ namespace DevExMobileApp.UI
 
             if (reward.Kudos < priceOfItem)
             {
-                await DisplayAlert("", "You don't have enough Kudos to purchase this item?", "OK");
+                await DisplayAlert("", "You don't have enough Kudos to purchase this item", "OK");
                 return;
             }
             else
@@ -158,7 +158,11 @@ namespace DevExMobileApp.UI
                     newReward.Kudos = reward.Kudos - priceOfItem;
                     Reward = newReward;
                     EditRewardsInDataBase(Reward);
+
+
                     SendEmailConfirmation(transaction);
+
+                    await DisplayAlert("Confirmation", "Purchase Successful", "OK");
                 }
             }
 

@@ -29,9 +29,12 @@ namespace DevExMobileApp.UI
             gridDashboard.RowSpacing = 5;
             DevexHeading.FontFamily = Device.OnPlatform("MarkerFelt-Thin", "Roboto", "Verdana");
             DevexHeading.TextColor = Color.White;
-           
-            
-           
+            activityIndicator.HorizontalOptions = LayoutOptions.CenterAndExpand;
+            activityIndicator.Color = Color.White;
+            activityIndicator.IsVisible = false;
+
+
+
         }
 
         async private void AgendaClicked(object sender, EventArgs e)
@@ -107,8 +110,13 @@ namespace DevExMobileApp.UI
 
         private async Task AcceptInvite()
         {
+            activityIndicator.IsRunning = true;
+            activityIndicator.IsVisible = true;
+
             if (DevExMobileApp.Helpers.Settings.RegisteredDate != string.Empty && DateTime.Now.Month == Convert.ToDateTime(DevExMobileApp.Helpers.Settings.RegisteredDate).Month)
             {
+                activityIndicator.IsRunning = false;
+                activityIndicator.IsVisible = false;
                 await DisplayAlert("", "You have already confirmed your attendance", "OK");
             }
             else
@@ -128,10 +136,14 @@ namespace DevExMobileApp.UI
                     var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
                     var message = await client.PostAsync(baseurl, content);
                     DevExMobileApp.Helpers.Settings.RegisteredDate = DateTime.Now.ToString();
+                    activityIndicator.IsRunning = false;
+                    activityIndicator.IsVisible = false;
                     await DisplayAlert("", "You have succesfully confirmed your attendance", "OK");
                 }
                 catch
                 {
+                    activityIndicator.IsRunning = false;
+                    activityIndicator.IsVisible = false;
                     await DisplayAlert("", "There was an issue confirming your attendance, Please try again later", "OK");
                 }
             }
@@ -139,10 +151,14 @@ namespace DevExMobileApp.UI
 
         private async Task AddAttendancePoints(string points)
         {
+            activityIndicator.IsRunning = true;
+            activityIndicator.IsVisible = true;
             try
             {
                 if (DevExMobileApp.Helpers.Settings.ScannedKudosDate != string.Empty && DateTime.Now.Month == Convert.ToDateTime(DevExMobileApp.Helpers.Settings.ScannedKudosDate).Month)
                 {
+                    activityIndicator.IsRunning = false;
+                    activityIndicator.IsVisible = false;
                     await DisplayAlert("", "You have already scanned this code", "OK");
                     return;
                 }
@@ -165,10 +181,14 @@ namespace DevExMobileApp.UI
                     EditRewardsInDataBase(reward);
                 }
                 DevExMobileApp.Helpers.Settings.ScannedKudosDate = DateTime.Now.ToString();
+                activityIndicator.IsRunning = false;
+                activityIndicator.IsVisible = false;
                 await DisplayAlert("", "Kudos Increased", "OK");
             }
             catch
             {
+                activityIndicator.IsRunning = false;
+                activityIndicator.IsVisible = false;
                 await DisplayAlert("","An error has occurred, Please try again later", "OK");
             }
 

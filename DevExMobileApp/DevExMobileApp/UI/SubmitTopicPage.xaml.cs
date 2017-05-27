@@ -38,7 +38,7 @@ namespace DevExMobileApp.UI
                 };
 
 
-
+               
 
                 string baseurl = "https://emailservicefunction.azurewebsites.net/api/SubmitTopicFunction?code=9CnxKy3YC81iRvWzQCLK/fYNFfXY9sRNp2Gijnpl5lMhpTisEY7IbA==";
                 var client = new HttpClient();

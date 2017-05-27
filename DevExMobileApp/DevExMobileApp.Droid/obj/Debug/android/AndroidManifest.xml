@@ -8,7 +8,7 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <application android:label="DevExMobileApp.Droid" android:name="md5d9f758bde5191949516d446f4aab0082.MainApplication" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="DevExMobileApp" android:theme="@style/MainTheme" android:name="md5d9f758bde5191949516d446f4aab0082.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="DevEx" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="md5d9f758bde5191949516d446f4aab0082.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
